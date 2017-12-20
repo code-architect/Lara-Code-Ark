@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Account;
 
+use App\Http\Requests\Account\ProfileStoreRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,7 +13,7 @@ class ProfileController extends Controller
         return view('account.profile.index');
     }
 
-    public function store(Request $request)
+    public function store(ProfileStoreRequest $request)
     {
         $request->user()->update($request->only('name', 'email'));
 
