@@ -2,17 +2,6 @@
 
 @section('account.content')
 
-    @if(Session::has('success'))
-        <div class="alert alert-success">
-            <strong>{{ Session::get('success') }}</strong>
-        </div>
-    @endif
-    @if(Session::has('danger'))
-        <div class="alert alert-danger">
-            <strong>{{ Session::get('danger') }}</strong>
-        </div>
-    @endif
-
     <div class="panel panel-default">
         <div class="panel-body">
             <form action="{{ route('account.password.store') }}" method="POST">
