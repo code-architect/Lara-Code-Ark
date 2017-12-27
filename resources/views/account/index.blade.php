@@ -2,6 +2,10 @@
 
 @section('account.content')
 
-        Account OverView
+        <div class="panel panel-default">
+                <div class="panel-body">
+                        Account OverView
+                </div>
+        </div>
 
 @endsection
