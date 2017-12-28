@@ -11,7 +11,11 @@
 |
 */
 
+Route::get('/token', function (){
+    $token = auth()->user()->generateConfirmationToken();
 
+    dd($token);
+});
 
 Auth::routes();
 
