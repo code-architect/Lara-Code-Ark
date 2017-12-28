@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Account;
 
+use App\Rules\CurrentPassword;
 use Illuminate\Foundation\Http\FormRequest;
 
 class PasswordStoreRequest extends FormRequest
@@ -24,7 +25,7 @@ class PasswordStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'password_current'  =>  'required',
+            'password_current'  =>  ['required', new CurrentPassword()],
             'password'  =>  'required|string|min:6|confirmed',
         ];
     }

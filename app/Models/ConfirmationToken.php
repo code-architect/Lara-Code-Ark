@@ -17,12 +17,12 @@ class ConfirmationToken extends Model
         'expires_at'
     ];
 
-//    public static function boot()
-//    {
-//        static::creating(function($token){
-//            optional($token->user->confirmationToken)->delete();
-//        });
-//    }
+    public static function boot()
+    {
+        static::creating(function($token){
+            optional($token->user->confirmationToken)->delete();
+        });
+    }
 
     public function getRouteKeyName()
     {

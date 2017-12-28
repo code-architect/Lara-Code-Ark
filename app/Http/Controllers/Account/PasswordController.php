@@ -25,12 +25,6 @@ class PasswordController extends Controller
      */
     public function store(PasswordStoreRequest $request)
     {
-        // check if the given current password is correct
-        if(!Hash::check($request->password_current, auth()->user()->password))
-        {
-
-            return redirect()->route('account.password.index')->withError('Please provide correct current password.');;
-        }
 
         $request->user()->update([
             'password' => bcrypt($request->password)
