@@ -41,7 +41,10 @@ Route::group(['prefix' => 'account', 'middleware' => ['auth'], 'as' => 'account.
     Route::post('/password', 'Account\PasswordController@store')->name('password.store');
 });
 
-Route::group(['prefix' => 'activation', 'as' => 'activation.'], function (){
+/**
+ * Account Activation
+ */
+Route::group(['prefix' => 'activation', 'as' => 'activation.', 'middleware' => ['guest', 'confirmation_token.expired:/']], function (){
 
     /**
      * activate user through confirmation mail
