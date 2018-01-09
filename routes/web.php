@@ -44,10 +44,13 @@ Route::group(['prefix' => 'account', 'middleware' => ['auth'], 'as' => 'account.
 /**
  * Account Activation
  */
-Route::group(['prefix' => 'activation', 'as' => 'activation.', 'middleware' => ['guest', 'confirmation_token.expired:/']], function (){
+Route::group(['prefix' => 'activation', 'as' => 'activation.', 'middleware' => ['guest']], function (){
 
     /**
      * activate user through confirmation mail
      */
+    Route::get('/resend', 'Auth\ActivationResendController@index')->name('resend');
+    Route::post('/resend', 'Auth\ActivationResendController@store')->name('resend.store');
     Route::get('/{confirmation_token}', 'Auth\ActivationController@activate')->name('activate');
+
 });
