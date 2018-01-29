@@ -8,7 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 	
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/reset.css') }}" />
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/main.css') }}" />
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/frontend/responsive.css') }}" />
 
 	<script	src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -18,30 +17,7 @@
 </head>
 <body>
 
-	<section class="hero">
-		<header>
-			<div class="wrapper">
-				<a href="#"><img src="{{ asset('css/frontend/mg/logo.png') }}img/logo.png" class="logo" alt="" titl=""/></a>
-				<a href="#" class="hamburger"></a>
-				<nav>
-					<ul>
-						<li><a href="#">Buy</a></li>
-						<li><a href="#">Rent</a></li>
-						<li><a href="#">Sell</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-					<a href="#" class="login_btn">Login</a>
-				</nav>
-			</div>
-		</header><!--  end header section  -->
-
-			<section class="caption">
-				<h2 class="caption" style="color: black">Find You Dream Home</h2>
-				<h3 class="properties">Appartements - Houses - Mansions</h3>
-			</section>
-	</section><!--  end hero section  -->
-
+@include('layouts.partials.frontend.frontend_partial_nav')
 
 	<section class="search">
 		<div class="wrapper">
@@ -83,7 +59,7 @@
 			<ul class="properties_list">
 				<li>
 					<a href="#">
-						<img src="img/property_1.jpg" alt="" title="" class="property_img"/>
+						<img src="{{ asset('css/frontend/img/property_1.jpg') }}" alt="" title="" class="property_img"/>
 					</a>
 					<span class="price">$2500</span>
 					<div class="property_details">
@@ -95,7 +71,7 @@
 				</li>
 				<li>
 					<a href="#">
-						<img src="img/property_2.jpg" alt="" title="" class="property_img"/>
+						<img src="{{ asset('css/frontend/img/property_2.jpg') }}" alt="" title="" class="property_img"/>
 					</a>
 					<span class="price">$1000</span>
 					<div class="property_details">
@@ -107,7 +83,7 @@
 				</li>
 				<li>
 					<a href="#">
-						<img src="img/property_3.jpg" alt="" title="" class="property_img"/>
+						<img src="{{ asset('css/frontend/img/property_3.jpg') }}" alt="" title="" class="property_img"/>
 					</a>
 					<span class="price">$500</span>
 					<div class="property_details">
