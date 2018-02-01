@@ -61,5 +61,6 @@ Route::group(['prefix' => 'activation', 'as' => 'activation.', 'middleware' => [
 Route::group(['prefix' => 'plans', 'as' => 'plans.'], function (){
 
     Route::get('/', 'Subscription\PlanController@index')->name('index');
+    Route::get('/groups', 'Subscription\PlanGroupController@index')->name('groups.index');
 
 });
