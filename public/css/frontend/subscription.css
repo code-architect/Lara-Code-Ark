@@ -1,0 +1,71 @@
+body
+{
+
+}
+.header
+{
+    background-color: #ffffff;
+    border-bottom: 1px solid #CCC;
+}
+.header-img
+{
+    margin: 15px auto 10px;
+    display: block;
+    /*-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;*/
+}
+.offer
+{
+    max-width: 330px;
+    margin: 0 auto;
+}
+.labels
+{
+    font-size: 10px;
+    color: #CCC;
+}
+.no-pad
+{
+    padding:0px;
+    line-height:15px;
+    margin-bottom:10px;
+    margin-top:20px;
+}
+.section
+{
+    border-bottom: 1px solid #CCC;
+    padding: 0px 0 0 0;
+}
+.values
+{
+    color: #000;
+    font-weight:300;
+}
+.btn
+{
+    color:#fff;
+    font-size:11px;
+    border-radius: 0;
+    width:360px;
+    background-color:#39ce39;
+    border: 1px solid #39ce39;
+}
+.col-xs-4, .col-xs-8, .col-xs-6, .col-xs-5, .col-xs-7
+{
+    padding: 5px 0px 5px 0;;
+}
+.right-border
+{
+    border-right: 1px solid #CCC;
+}
+.values-small
+{
+    color: #000;
+    font-size:14px;
+    font-weight:300;
+}
+.left
+{
+    float:left;
+}

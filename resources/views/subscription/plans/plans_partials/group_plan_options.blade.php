@@ -17,9 +17,7 @@
                             <span class="pricing-list-v4-price">{{ $plan->price }}</span>
                             <span class="pricing-list-v4-price-info">Month</span>
                         </div>
-                        <div class="center-block">
-                            <button type="button" class="btn-dark-brd btn-base-sm radius-3">Get Details</button>
-                        </div>
+                        @include('subscription.plans.plans_partials.plan_button')
                     </div>
                 </div>
                 <!-- End Pricing List v4 -->
