@@ -56,10 +56,19 @@ Route::group(['prefix' => 'activation', 'as' => 'activation.', 'middleware' => [
 });
 
 /**
- * Account Activation
+ * Plans
  */
 Route::group(['prefix' => 'plans', 'as' => 'plans.'], function (){
 
     Route::get('/', 'Subscription\PlanController@index')->name('index');
+    Route::get('/groups', 'Subscription\PlanGroupController@index')->name('groups.index');
+});
 
+/**
+ * Subscription
+ */
+Route::group(['prefix' => 'subscription', 'as' => 'subscription.', 'middleware' => ['auth.register']], function (){
+
+    Route::get('/', 'Subscription\SubscriptionController@index')->name('index');
+    Route::post('/', 'Subscription\SubscriptionController@store')->name('store');
 });

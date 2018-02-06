@@ -10,10 +10,10 @@
                     <li><a href="#">Sell</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li><a href="{{ route('plans.index') }}">Plans</a></li>
                 </ul>
                 @if (Auth::guest())
-                    <a href="{{ route('login') }}" class="login_btn">Login</a>
-                   <a href="{{ route('register') }}" class="login_btn">Register</a>
+                    <a href="{{ route('login') }}" class="login_btn">Sign In/Sign Up</a>
                 @endif
 
             </nav>

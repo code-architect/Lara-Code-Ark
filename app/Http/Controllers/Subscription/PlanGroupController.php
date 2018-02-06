@@ -6,11 +6,11 @@ use App\Models\Plan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PlanController extends Controller
+class PlanGroupController extends Controller
 {
     public function index()
     {
-        $plans = Plan::active()->forUsers()->get();
-        return view('subscription.plans.index', compact('plans'));
+        $plans = Plan::active()->forGroups()->get();
+        return view('subscription.plans.groups.index', compact('plans'));
     }
 }
